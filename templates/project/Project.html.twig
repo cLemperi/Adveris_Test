@@ -1,0 +1,44 @@
+{# templates/project/show.html.twig #}
+
+<h1>Project Information</h1>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <td>{{ project.name }}</td>
+    </tr>
+    <tr>
+        <th>Start Date</th>
+        <td>{{ project.startDate|date('Y-m-d') }}</td>
+    </tr>
+    <tr>
+        <th>Price Sold</th>
+        <td>{{ project.priceSold }}</td>
+    </tr>
+    <tr>
+        <th>Type</th>
+        <td>{{ project.type }}</td>
+    </tr>
+    <tr>
+        <th>Estimated Time to Completion</th>
+        <td>{{ project.estimatedTimeToCompletion }}</td>
+    </tr>
+    <tr>
+        <th>Spent Time</th>
+        <td>{{ project.spentTime }}</td>
+    </tr>
+    <tr>
+        <th>Technology</th>
+        <td>{{ project.technology }}</td>
+    </tr>
+    <tr>
+        <th>Company</th>
+        <td>{{ project.company }}</td>
+    </tr>
+    <tr>
+        <th>Workers</th>
+        <td>{{ project.workers|join(', ') }}</td>
+    </tr>
+</table>
+
+<a href="{{ path('app_project') }}">retour à la list des projets</a>

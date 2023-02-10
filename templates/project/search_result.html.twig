@@ -1,0 +1,11 @@
+{% block body %}
+    <h2>Résultats de la recherche :</h2>
+    <ul>
+        {% for project in results %}
+            <li>
+                {{ project.name }}
+                <a href="{{ path('project_show', {'id': project.id}) }}">Voir les détails</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

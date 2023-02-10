@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProjectController!{% endblock %}
+
+{% block body %}
+
+<p> Voici le test technique de Lemperiere Charles <p> 
+<h1>Liste de tous les projets</h1>
+
+
+<ul>
+    {% for project in projects %}
+        <li><a href="{{ path('project_show', {'id': project.id}) }}">{{ project.name }}</a></li>
+    {% endfor %}
+</ul>
+<form action="{{ path('search_results') }}" method="post">
+    <input type="text" name="search_query">
+    <button type="submit">Rechercher</button>
+</form>
+
+{% endblock %}
+

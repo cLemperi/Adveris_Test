@@ -19,6 +19,12 @@ services:
             - '../src/DependencyInjection/'
             - '../src/Entity/'
             - '../src/Kernel.php'
+    App\Command\ImportDataCommand:
+        tags:
+            - { name: console.command }
+            
+    GuzzleHttp\Client:
+        class: GuzzleHttp\Client
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
